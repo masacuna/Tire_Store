@@ -1,4 +1,17 @@
 TireStore::Application.routes.draw do
+  resources :provinces
+
+  resources :products
+
+  resources :orders
+
+  resources :line_items
+
+  resources :categories
+
+  devise_for :users
+  get "home/index"
+  root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
