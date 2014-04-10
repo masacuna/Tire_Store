@@ -1,4 +1,10 @@
 TireStore::Application.routes.draw do
+  get "users/index"
+  get "users/show"
+  # get "user/index"
+  # get "user/show"
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :provinces
 
   resources :products
@@ -10,7 +16,7 @@ TireStore::Application.routes.draw do
   resources :categories
 
   devise_for :users
-  get "home/index"
+  # get "home/index"
   root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

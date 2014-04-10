@@ -6,7 +6,7 @@ class CreateOrders < ActiveRecord::Migration
       t.decimal :gst_rate
       t.decimal :hst_rate
       t.decimal :price
-
+      t.references :user
       t.timestamps
     end
   end
