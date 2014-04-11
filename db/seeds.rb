@@ -28,7 +28,7 @@
   Province.create(name: 'Yukon', gst: 0.05, hst: 0, pst: 0.00)
 
   User.create(first_name: 'Bart', last_name: 'Sampson', address: '123 Main St', city: 'Springfield', email: 'bart@gmail.com', password: 'eatshorts', province_id: 1)
-  User.create(first_name: 'Steve', last_name: 'Snowdon', address: '124 Plain St', city: 'Winnipeg', email: 'steve@gmail.com', password: 'milk',province_id: 2)
+  User.create(first_name: 'Steve', last_name: 'Snowdon', address: '124 Plain St', city: 'Winnipeg', email: 'steve@gmail.com', password: 'milk', province_id: 2)
 
 
   Product.create(name: 'Motomaster', price: 200, description: "Cdn Tire brand", stock_quantity: 20)
@@ -41,6 +41,6 @@
   LineItem.create(quantity: 4, product_id: 1, order_id: 1)
   LineItem.create(quantity: 4, product_id: 2, order_id: 2)
 
-  Category.create(name:"All-Season" description: "Tires for entire year")
-  Category.create(name:"Summer" description: "Tires for summer")
-  Category.create(name:"Winter" description: "Tires for winter")
+  Category.create(name:"All-Season", description: "Tires for entire year")
+  Category.create(name:"Summer", description: "Tires for summer")
+  Category.create(name:"Winter", description: "Tires for winter")
