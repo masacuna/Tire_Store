@@ -170,6 +170,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
+  inherited_resources
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.2)

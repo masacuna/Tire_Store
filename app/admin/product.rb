@@ -21,8 +21,7 @@ ActiveAdmin.register Product do
         f.input :description
         f.input :stock_quantity
         f.input :category
-
-        f.input :image, :as => :file
+        f.input :image
       end
 
 

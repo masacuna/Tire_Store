@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 20140411003350) do
     t.decimal  "price"
     t.text     "description"
     t.integer  "stock_quantity"
+    t.string   "image"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"

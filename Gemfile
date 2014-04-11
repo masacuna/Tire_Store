@@ -36,7 +36,7 @@ gem 'devise'
 
 gem 'carrierwave'
 #installed to help with issues on April 10th
-# gem 'inherited_resources', github: 'josevalim/inherited_resources'
+gem 'inherited_resources'
 #gem 'protected_attributes'
 
 gem 'activeadmin', github: 'gregbell/active_admin'

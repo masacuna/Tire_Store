@@ -1,2 +1,2 @@
-class LineItemsController < ApplicationController::Base
+class LineItemsController < InheritedResources::Base
 end
