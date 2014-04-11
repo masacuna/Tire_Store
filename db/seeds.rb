@@ -40,3 +40,7 @@
 
   LineItem.create(quantity: 4, product_id: 1, order_id: 1)
   LineItem.create(quantity: 4, product_id: 2, order_id: 2)
+
+  Category.create(name:"All-Season" description: "Tires for entire year")
+  Category.create(name:"Summer" description: "Tires for summer")
+  Category.create(name:"Winter" description: "Tires for winter")
