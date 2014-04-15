@@ -14,4 +14,11 @@ ActiveAdmin.register LineItem do
   #  permitted
   # end
   
+  controller do
+    def index
+      params[:order] = "id_asc"
+      super
+    end
+  end
+
 end

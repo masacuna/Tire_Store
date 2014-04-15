@@ -1,2 +1,2 @@
-class CategoriesController < ApplicationController::Base
+class CategoriesController < InheritedResources::Base
 end

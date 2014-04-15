@@ -6,12 +6,39 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+  <header>
+    <h1>THE TIRE STORE</h1>
+  </header>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+    <section id="navigation">
+        
+        <nav>
+          <ul>
+            <li id="link1"><a href = "">Home</a></li>
+            <li id="link2"><a href = "">Products</a></li>
+            <li id="link3"><a href = "">About Us</a></li>
+            <li id="link4"><a href = "">Contact</a></li>
+          </ul>
+        </nav>
+    </section>  
 
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <%= yield %>
+
+  <!-- <footer>
+    <nav>
+          <ul>
+            <li id="link1"><a href = "">Home</a></li>
+            <li id="link2"><a href = "">Products</a></li>
+            <li id="link3"><a href = "">About Us</a></li>
+            <li id="link4"><a href = "">Contact</a></li>
+          </ul>
+        </nav>
+  </footer> -->
 
 </body>
 </html>

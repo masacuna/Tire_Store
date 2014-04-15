@@ -1,2 +1,2 @@
-class ProvincesController < ApplicationController::Base
+class ProvincesController < InheritedResources::Base
 end

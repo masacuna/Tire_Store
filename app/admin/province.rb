@@ -13,5 +13,11 @@ ActiveAdmin.register Province do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  
+  controller do
+    def index
+      params[:order] = "id_asc"
+      super
+    end
+  end
+
 end

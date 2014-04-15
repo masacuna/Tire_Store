@@ -13,6 +13,13 @@ ActiveAdmin.register Product do
   #  permitted << :other if resource.something?
   #  permitted
   # end
+
+  controller do
+    def index
+      params[:order] = "id_asc"
+      super
+    end
+  end
   
   form do |f|
       f.inputs "New Product Details" do
@@ -21,7 +28,7 @@ ActiveAdmin.register Product do
         f.input :description
         f.input :stock_quantity
         f.input :category
-        f.input :image
+        f.input :image 
       end
 
 
