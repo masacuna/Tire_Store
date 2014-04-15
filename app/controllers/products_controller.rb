@@ -9,21 +9,21 @@ class ProductsController < InheritedResources::Base
     @product = Product.find(set_product)
   end
 
-  def new
-    @product = Product.new
-  end
+  # def new
+  #   @product = Product.new
+  # end
 
-  def create
-    @product = Product.new(product_params)
-  end
+  # def create
+  #   @product = Product.new(product_params)
+  # end
 
-  def destroy
-    @product.destroy
-    respond_to do |format|
-      format.html { redirect_to products_url }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @product.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to products_url }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
 
   private

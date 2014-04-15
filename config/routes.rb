@@ -1,4 +1,5 @@
 TireStore::Application.routes.draw do
+  get "store/index"
   # resources :about_us
   get "about_us", to: 'about_us#index', as: 'about_us'
   # get "users" , to: 'users#index', as: 'users'
@@ -15,10 +16,13 @@ TireStore::Application.routes.draw do
   resources :provinces
 
   # resources :products
+
+  get 'products/new', to: 'products#new', as: 'new_product'
   get 'products/:id', to: 'products#show', as: 'product'
   get 'products', to: 'products#index', as: 'products'
   get 'products/:id', to: 'products#edit', as: 'edit_product'
-  get 'products/new', to: 'products#new', as: 'new_product'
+  
+  
   resources :orders
 
   resources :line_items
