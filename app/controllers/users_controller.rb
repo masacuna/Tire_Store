@@ -6,11 +6,11 @@ class UsersController < ApplicationController
 
   def show
     
-  end
+  end# Loads: app/views/products/show.html.erb
 
   def create
     @user = User.create( user_params)
-  end
+  end# Loads: app/views/products/new.html.erb
 
   private
     # Use callbacks to share common setup or constraints between actions.

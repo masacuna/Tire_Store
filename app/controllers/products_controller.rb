@@ -6,7 +6,11 @@ class ProductsController < InheritedResources::Base
   end
 
   def show
-    
+    @product = Product.find(set_product)
+  end
+
+  def new
+    @product = Product.new
   end
 
   def create

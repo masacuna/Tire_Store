@@ -31,12 +31,12 @@
   User.create(first_name: 'Steve', last_name: 'Snowdon', address: '124 Plain St', city: 'Winnipeg', email: 'steve@gmail.com', password: 'milk', province_id: 2)
 
 
-  Product.create(name: 'Motomaster', price: 200, description: "Cdn Tire brand", stock_quantity: 20)
-  Product.create(name: 'Nokian', price: 300, description: "Nokian Hak", stock_quantity: 40)
-  Product.create(name: 'Cooper', price: 250, description: "Cooper Tire", stock_quantity: 60)
+  Product.create(name: 'Motomaster', price: 200, description: "Cdn Tire brand", stock_quantity: 20, category_id: 1)
+  Product.create(name: 'Nokian', price: 300, description: "Nokian Hak", stock_quantity: 40, category_id: 2)
+  Product.create(name: 'Cooper', price: 250, description: "Cooper Tire", stock_quantity: 60, category_id: 3)
 
   Order.create(status: 'shipped', pst_rate: 0.08, gst_rate: 0.05, hst_rate: 0, user_id: 1, price: 800 )
-  Order.create(status: 'pending', pst_rate: 0.00, gst_rate: 0.05, hst_rate: 0, user_id: 2, price: 1200 )
+  Order.create(status: 'paid', pst_rate: 0.00, gst_rate: 0.05, hst_rate: 0, user_id: 2, price: 1200 )
 
   LineItem.create(quantity: 4, product_id: 1, order_id: 1)
   LineItem.create(quantity: 4, product_id: 2, order_id: 2)

@@ -1,5 +1,11 @@
 TireStore::Application.routes.draw do
-  get "users" , to: 'users#index', as: 'users'
+  # resources :about_us
+  get "about_us", to: 'about_us#index', as: 'about_us'
+  # get "users" , to: 'users#index', as: 'users'
+
+  # get 'search', to: 'categories#search', as: 'search'
+  # get 'search', to: 'categories#search_results', as: 'search_results'
+
   # get "users/show"
   
   # get "user/index"
@@ -8,9 +14,11 @@ TireStore::Application.routes.draw do
   ActiveAdmin.routes(self)
   resources :provinces
 
-  resources :products
-  # get 'products/:id', to: 'product#show', as: 'product'
-
+  # resources :products
+  get 'products/:id', to: 'products#show', as: 'product'
+  get 'products', to: 'products#index', as: 'products'
+  get 'products/:id', to: 'products#edit', as: 'edit_product'
+  get 'products/new', to: 'products#new', as: 'new_product'
   resources :orders
 
   resources :line_items
