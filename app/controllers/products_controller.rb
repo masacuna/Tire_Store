@@ -6,6 +6,7 @@ class ProductsController < InheritedResources::Base
   end
 
   def show
+    
   end
 
   def create

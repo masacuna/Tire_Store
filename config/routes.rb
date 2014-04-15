@@ -1,6 +1,7 @@
 TireStore::Application.routes.draw do
   get "users" , to: 'users#index', as: 'users'
-  get "users/show"
+  # get "users/show"
+  
   # get "user/index"
   # get "user/show"
   devise_for :admin_users, ActiveAdmin::Devise.config
