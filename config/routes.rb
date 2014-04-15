@@ -1,5 +1,5 @@
 TireStore::Application.routes.draw do
-  get "users/index"
+  get "users" , to: 'users#index', as: 'users'
   get "users/show"
   # get "user/index"
   # get "user/show"
@@ -8,6 +8,7 @@ TireStore::Application.routes.draw do
   resources :provinces
 
   resources :products
+  # get 'products/:id', to: 'product#show', as: 'product'
 
   resources :orders
 
