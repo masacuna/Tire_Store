@@ -1,6 +1,8 @@
 <h1>Listing products</h1>
 
-<%= render 'table'  %>
+<% @products.each do |product| %>
+<%= render product  %>
+<% end %>
 
-<br>
+
 

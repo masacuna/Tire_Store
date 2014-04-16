@@ -1,3 +1,8 @@
 <h1>Home#index</h1>
 
-<%= render 'products/table' %>
+
+
+<% @categories.each do |category| %>
+  <h1><%= category.name %></h1>
+    <%= render  category.products %>
+<% end %>
