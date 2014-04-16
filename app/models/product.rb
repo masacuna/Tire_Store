@@ -8,4 +8,9 @@ class Product < ActiveRecord::Base
   validates :name, :price , :stock_quantity , presence: true
   validates :price                          , numericality: true
   validates :stock_quantity                 , numericality: { only_integer: true }
+
+  def self.keyword_search(keywords)
+    keywords = "%" + keywords + "%"
+    Product.where("name LIKE ?", keywords)
+  end
 end

@@ -17,11 +17,12 @@ TireStore::Application.routes.draw do
 
   # resources :products
 
-  get 'products/new', to: 'products#new', as: 'new_product'
-  get 'products/:id', to: 'products#show', as: 'product'
-  get 'products', to: 'products#index', as: 'products'
-  get 'products/:id', to: 'products#edit', as: 'edit_product'
-  
+  get 'products/new',   to: 'products#new',         as: 'new_product'
+  get 'products/:id',   to: 'products#show',        as: 'product'
+  get 'products',       to: 'products#index',       as: 'products'
+  get 'products/:id',   to: 'products#edit',        as: 'edit_product'
+  get 'search',         to: 'home#search',          as: 'search'
+  get 'search_results', to: 'home#search_results',  as: 'search_results'
   
   resources :orders
 
