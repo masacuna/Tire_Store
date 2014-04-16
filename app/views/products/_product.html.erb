@@ -5,5 +5,5 @@
     <p><strong>description:</strong> <%= product.description %></p>
     <p><strong>price: </strong><%= product.price %></p>
     <p><strong>stock quantity: </strong><%= product.stock_quantity %></p>
-    <p><%= product.image %></p>
+    <p><%= image_tag product.image, :class => "prod_img"  %></p>
 </section>
