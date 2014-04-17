@@ -1,8 +1,10 @@
 TireStore::Application.routes.draw do
+  # resources :abouts
+
   get "store/index"
-  # resources :about_us
-  get "about_us", to: 'about_us#index', as: 'about_us'
-  # get "users" , to: 'users#index', as: 'users'
+   # resources :about_us
+  get "about", to: 'abouts#index', as: 'about'
+  get "users" , to: 'users#index', as: 'users'
 
   # get 'search', to: 'categories#search', as: 'search'
   # get 'search', to: 'categories#search_results', as: 'search_results'
