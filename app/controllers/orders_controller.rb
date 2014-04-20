@@ -1,2 +1,2 @@
-class OrdersController < InheritedResources::Base
+class OrdersController < ApplicationController #< InheritedResources::Base
 end

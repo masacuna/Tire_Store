@@ -1,5 +1,5 @@
 
-class ProductsController < InheritedResources::Base
+class ProductsController < ApplicationController #< InheritedResources::Base
   # before_action :set_user, only: [:show]
   def index
     @products = Product.all
@@ -9,6 +9,8 @@ class ProductsController < InheritedResources::Base
     @product = Product.find(set_product)
   end
 
+  def update
+  end 
   # def new
   #   @product = Product.new
   # end

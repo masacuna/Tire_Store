@@ -1,4 +1,4 @@
-class AboutsController < InheritedResources::Base
+class AboutsController < ApplicationController #< InheritedResources::Base
   def index
     @abouts = About.all
   end

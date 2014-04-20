@@ -1,4 +1,4 @@
-class CategoriesController < InheritedResources::Base
+class CategoriesController < ApplicationController #< InheritedResources::Base
   def index
     @categories = Category.all#order(:name)
   end

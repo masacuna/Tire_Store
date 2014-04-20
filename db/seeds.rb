@@ -34,6 +34,15 @@
   Product.create(name: 'Motomaster', price: 200, description: "Cdn Tire brand", stock_quantity: 20, category_id: 1)
   Product.create(name: 'Nokian', price: 300, description: "Nokian Hak", stock_quantity: 40, category_id: 2)
   Product.create(name: 'Cooper', price: 250, description: "Cooper Tire", stock_quantity: 60, category_id: 3)
+  Product.create(name: 'Pirelli', price: 250, description: "Pirelli Tire", stock_quantity: 80, category_id: 2)
+  Product.create(name: 'Firestone', price: 199.99, description: "Firestone Tire", stock_quantity: 55, category_id: 1)
+  Product.create(name: 'Dunlop', price: 225.99, description: "Dunlop Tire", stock_quantity: 60, category_id: 3)
+  Product.create(name: 'GoodYear', price: 150, description: "GoodYear Tire", stock_quantity: 20, category_id: 3)
+  Product.create(name: 'Hankook', price: 230, description: "Hankook Tire", stock_quantity: 60, category_id: 2)
+  Product.create(name: 'Michelin', price: 149.99, description: "Michelin Tire", stock_quantity: 60, category_id: 1)
+  Product.create(name: 'BFGoodrich', price: 210, description: "BFGoodrich Tire", stock_quantity: 60, category_id: 3)
+
+
 
   Order.create(status: 'shipped', pst_rate: 0.08, gst_rate: 0.05, hst_rate: 0, user_id: 1, price: 800 )
   Order.create(status: 'paid', pst_rate: 0.00, gst_rate: 0.05, hst_rate: 0, user_id: 2, price: 1200 )

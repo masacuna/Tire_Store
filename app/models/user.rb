@@ -2,11 +2,12 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :orders
+  belongs_to :province
 
   validates :first_name            , presence: true
   validates :last_name             , presence: true
   validates :email                 , confirmation: true
-  validates :email_confirmation    , presence: true
+  # validates :email_confirmation    , presence: true
   validates :password              , confirmation: true if nil?
   validates :password_confirmation , presence: true if nil?
 
