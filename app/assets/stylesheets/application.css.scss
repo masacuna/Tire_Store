@@ -11,18 +11,29 @@
  *= require_self
  *= require_tree .
  */
- *{margin:0px;
-   padding:0px;}
+
 
  body{
+  background: #000;
+  
+  #container{
+    width: 900px;
+    margin: 0px auto;
+    background-color: gray;
+  }
+  
   header {
+    width: 900px;
+    margin: 0px auto;
     h1{
       background-color: blue;
     }
+
+     
     
   }
-
-  nav {
+nav {
+      margin-top:-20px;
     background-color: red;
     text-align: center;
     border-style:solid;
@@ -39,6 +50,11 @@
         }
     }
   }
+ 
+ footer{
+  width:900px;
+  margin: 0px auto;
+ }
   
 
 

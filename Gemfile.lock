@@ -176,6 +176,7 @@ DEPENDENCIES
   inherited_resources
   jbuilder (~> 1.2)
   jquery-rails
+  kaminari
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc

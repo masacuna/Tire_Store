@@ -11,6 +11,10 @@ class HomeController < ApplicationController
   def search_results
     @found_products = Product.keyword_search(params[:search_keywords])
     # keywords = "%" + params[:search_keywords] + "%"
+
+    if @found_products.count == 0 
+      flash.now[:alert] = "Search not found"
+    end
     # @found_products = Product.where("name LIKE ?", keywords)
   end# Displays search results
 end

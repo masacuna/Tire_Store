@@ -10,11 +10,7 @@
 <body>
   <header>
     <h1>THE TIRE STORE</h1>
-  </header>
-
-   
-        
-        <nav>
+    <nav>
           <ul>
             <li><%= link_to 'Home', root_path %></li>
             <li><%= link_to 'Products', products_path %></li>
@@ -24,12 +20,21 @@
             <li><%= link_to 'Sign In', users_path %></li>
           </ul>
         </nav>
-      
+  </header>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    
 
-  <%= yield %>
+ 
+
+  <section id="container">
+    <% if notice %>
+      <div class="alert alert-success"><%= notice %> </div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger"><%= alert %> </div>
+    <% end %>
+    <%= yield %>
+  </section>
 
   <footer>
     <nav>
