@@ -1,14 +1,20 @@
 TireStore::Application.routes.draw do
   # resources :abouts
-
+  devise_for :users
+  # the URL             the controller/action       the path name
   get "store/index"
-   # resources :about_us
-  get 'about', to: 'abouts#index', as: 'about'
-  get 'users', to: 'users#index', as: 'users'
-  get 'users/new', to: 'users#new', as: 'new_users'
-  get 'users/:id', to: 'users#show', as: 'user'
-  post 'users' , to: 'users#create'
-
+  get 'about',           to: 'abouts#index',         as: 'about'
+  get 'users',           to: 'users#index',          as: 'users'
+  get 'users/new',       to: 'users#new',            as: 'new_users'
+  get 'users/:id',       to: 'users#show',           as: 'user'
+  post 'users' ,         to: 'users#create'
+  get 'products/:id',    to: 'products#show',        as: 'product'
+  get 'products',        to: 'products#index',       as: 'products'
+  get 'search',          to: 'home#search',          as: 'search'
+  get 'search_results',  to: 'home#search_results',  as: 'search_results'
+  get 'home/cart',       to: 'home#cart',            as: 'cart'
+  post 'home/cart',      to: 'home#cart',            as: 'add_to_cart'
+  get 'home/clean_cart', to: 'home#clean_out_cart',  as: 'reset_cart'
   # get 'search', to: 'categories#search', as: 'search'
   # get 'search', to: 'categories#search_results', as: 'search_results'
 
@@ -21,12 +27,7 @@ TireStore::Application.routes.draw do
   resources :provinces
 
   # resources :products
-
-
-  get 'products/:id',   to: 'products#show',        as: 'product'
-  get 'products',       to: 'products#index',       as: 'products'
-  get 'search',         to: 'home#search',          as: 'search'
-  get 'search_results', to: 'home#search_results',  as: 'search_results'
+  # resources :users
   
   resources :orders
 
@@ -34,7 +35,7 @@ TireStore::Application.routes.draw do
 
   resources :categories
 
-  devise_for :users
+  
   # get "home/index"
   root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.

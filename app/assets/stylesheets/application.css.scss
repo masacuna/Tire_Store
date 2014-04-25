@@ -11,29 +11,34 @@
  *= require_self
  *= require_tree .
  */
-
+  $blue: blue;
 
  body{
   background: #000;
   
   #container{
-    width: 900px;
     margin: 0px auto;
+    width: 900px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: gray;
   }
   
   header {
     width: 900px;
     margin: 0px auto;
+
     h1{
-      background-color: blue;
+      background-color: $blue;
     }
 
-     
+    
     
   }
-nav {
-      margin-top:-20px;
+
+   nav {
+      margin-top: -20px;
+    padding: 20px;
     background-color: red;
     text-align: center;
     border-style:solid;
@@ -54,6 +59,7 @@ nav {
  footer{
   width:900px;
   margin: 0px auto;
+
  }
   
 

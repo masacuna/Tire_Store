@@ -11,22 +11,6 @@ class ProductsController < ApplicationController #< InheritedResources::Base
 
   def update
   end 
-  # def new
-  #   @product = Product.new
-  # end
-
-  # def create
-  #   @product = Product.new(product_params)
-  # end
-
-  # def destroy
-  #   @product.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to products_url }
-  #     format.json { head :no_content }
-  #   end
-  # end
-
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController #< InheritedResources::Base
   def index
-    @categories = Category.all#order(:name)
+    @categories = Category.all
   end
 
   # def search #displays a search form

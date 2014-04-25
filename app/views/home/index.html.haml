@@ -1,0 +1,4 @@
+%h1 Welcome
+- @categories.each do |category|
+  %h1= category.name
+  = render  category.products

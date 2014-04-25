@@ -1,0 +1,7 @@
+%p shopping cart 
+
+%p= "you have #{session[:cart].count}"
+- @products.each do |product|
+  = render product
+
+%p= link_to 'Delete cart', reset_cart_path

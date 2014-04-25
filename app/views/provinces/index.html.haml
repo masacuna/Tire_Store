@@ -1,0 +1,23 @@
+%h1 Listing provinces
+%table
+  %thead
+    %tr
+      %th Name
+      %th Gst
+      %th Hst
+      %th Pst
+      %th
+      %th
+      %th
+  %tbody
+    - @provinces.each do |province|
+      %tr
+        %td= province.name
+        %td= province.gst
+        %td= province.hst
+        %td= province.pst
+        %td= link_to 'Show', province
+        %td= link_to 'Edit', edit_province_path(province)
+        %td= link_to 'Destroy', province, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Province', new_province_path

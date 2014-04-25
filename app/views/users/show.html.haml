@@ -1,0 +1,12 @@
+%h1 Users#show
+%p#notice= notice
+%p
+  %strong First Name:
+  = @user.first_name
+%p
+  %strong Last Name:
+  = number_to_currency @user.last_name
+%p
+  %strong Email:
+  = @user.email
+= link_to 'Back', users_path

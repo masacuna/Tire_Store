@@ -11,10 +11,8 @@ class Product < ActiveRecord::Base
 
   def self.keyword_search(keywords)
     keywords = "%" + keywords + "%"
-    result = Product.where("name LIKE ?", keywords)
-    # if result != keywords
-    #   flash.now[:error] = "Search not found"
-    # end
+    result = Product.where("name LIKE ? OR description LIKE ?", keywords, keywords)
+    
   end
 
   

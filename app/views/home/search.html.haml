@@ -1,0 +1,9 @@
+= form_tag search_results_path, method: 'get' do
+  = text_field_tag :search_keywords
+  = select_tag :search, options_for_select([["All Products",1],["All Season",2],["Summer",3],["Winter",4]],1)
+  = submit_tag "Search"
+
+  / = form_tag search_results_path, method: 'get' do
+  / = text_field_tag :search_keywords
+  / = select_tag :search, options_for_select([["All Products",1],["Categories",2]],1)
+  / = submit_tag "Search"

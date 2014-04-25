@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %title TireStore
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    %header
+      %h1 THE TIRE STORE
+      %nav
+        %ul
+          %li= link_to 'Home', root_path
+          %li= link_to 'Products', products_path
+          %li= link_to 'Categories', categories_path
+          %li= link_to 'Search', search_path
+          %li= link_to 'About us', about_path
+          - if user_signed_in?
+            %li= link_to 'Log Out', destroy_user_session_path, :method => :delete
+          - else
+            %li= link_to 'Sign In', new_user_session_path
+    %section#container
+      - if notice
+        .alert.alert-success= notice
+      - if alert
+        .alert.alert-danger= alert
+      = yield
+    %footer
+      %nav
+        %ul
+          %li= link_to 'Home', root_path
+          %li= link_to 'Products', products_path
+          %li= link_to 'Categories', categories_path
+          %li= link_to 'Search', search_path
+          %li= link_to 'About us', about_path
+          %li= link_to 'Sign In', users_path

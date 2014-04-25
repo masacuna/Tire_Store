@@ -1,0 +1,36 @@
+%h2 new user
+= form_for @user do |f|
+  - if @user.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@user.errors.count, "error")
+        prohibited this product from being saved:
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :email
+    %br/
+    = f.email_field :email
+  .field
+    = f.label :password
+    %br/
+    = f.text_field :password
+  .field
+    = f.label :first_name
+    %br/
+    = f.text_field :first_name
+  .field
+    = f.label :last_name
+    %br/
+    = f.text_field :last_name
+  .field
+    = f.label :address
+    %br/
+    = f.text_field :address
+  .field
+    = f.label :city
+    %br/
+    = f.text_field :city
+  .actions
+    = f.submit

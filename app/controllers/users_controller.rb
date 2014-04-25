@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   # before_action :set_user, only: [:index,:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   def index 
     @users = User.all
   end
@@ -16,12 +16,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to action: :user
+      redirect_to @user 
     else
       render "new"
     end
 
   end# Loads: app/views/products/new.html.erb
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

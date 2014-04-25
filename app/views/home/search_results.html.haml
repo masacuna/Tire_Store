@@ -1,0 +1,4 @@
+%h2
+  search results for '#{params[:search_keywords]}'
+= render partial: 'products/product', |
+  collection: @found_products         |

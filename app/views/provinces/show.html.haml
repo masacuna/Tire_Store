@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @province.name
+%p
+  %strong Gst:
+  = @province.gst
+%p
+  %strong Hst:
+  = @province.hst
+%p
+  %strong Pst:
+  = @province.pst
+= link_to 'Edit', edit_province_path(@province)
+|
+\#{link_to 'Back', provinces_path}

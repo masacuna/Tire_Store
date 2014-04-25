@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %strong Status:
+  = @order.status
+%p
+  %strong Pst rate:
+  = @order.pst_rate
+%p
+  %strong Gst rate:
+  = @order.gst_rate
+%p
+  %strong Hst rate:
+  = @order.hst_rate
+%p
+  %strong Price:
+  = @order.price
+= link_to 'Edit', edit_order_path(@order)
+|
+\#{link_to 'Back', orders_path}

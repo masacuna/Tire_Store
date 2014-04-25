@@ -1,0 +1,26 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @product.name
+%p
+  %strong Price:
+  = number_to_currency @product.price
+%p
+  %strong Description:
+  = @product.description
+%p
+  %strong Stock quantity:
+  = @product.stock_quantity
+- if @product.category.present?
+  %p
+    %strong Category:
+    = @product.category.name
+%p
+  %strong Image:
+  = image_tag @product.image, class: "prod_img"
+%p
+  = form_tag(cart_path, method: 'post')
+  %input{type:'hidden', name: 'product_id', value: @product.id}
+  %input{type: 'text', name: 'quantity', value: 0}
+  = submit_tag "Add to cart"
+  

@@ -1,0 +1,12 @@
+%section
+  %h3= link_to product.name, product
+  %p
+    %strong description:
+    = product.description
+  %p
+    %strong price:
+    = number_to_currency(product.price)
+  %p
+    %strong stock quantity:
+    = product.stock_quantity
+  %p= image_tag product.image, :class => "prod_img"
